@@ -4,9 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML invoice</title>
-
-
-
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -18,101 +15,193 @@
     <head>
         <meta charset="utf-8">
         <title>Invoice</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="license" href="https://www.opensource.org/licenses/mit-license/">
-        <script src="script.js"></script>
     </head>
 
     <body>
-        <img src="Brandful%20Logo.png" height="50" width="200">
-        <h1 class="prof">PROFORMA INVOICE</h1>
-        <p class="mon-2" contenteditable>Afya Max Medical Center</p>
-        <p class="mon-3" contenteditable>P.O.Box 1234</p>
-        <p class="mon-4" contenteditable>Arusha</p>
+        <img src="logo.png" class="logo">
+        <h1 class="heading">PROFORMA INVOICE</h1>
 
-        <article>
+        <div class="blackline"></div>
+        <div class="redline"></div>
 
-            <table class="meta">
-                <tr>
-                    <td><span id="prefix">$</span>
-                        <span>600.00</span></td>
-                </tr>
-            </table>
-            <table class="inventory">
-                <thead>
-                    <tr>
-                        <th><span>ITEM</span></th>
-                        <th><span>DESCRIPTION</span></th>
-                        <th><span>UNIT PRICE</span></th>
-                        <th><span>QUANTITY</span></th>
-                        <th><span>TSHS</span></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a class="cut">-</a><span contenteditable>Folder</span></td>
-                        <td><span contenteditable>Single sided</span></td>
-                        <td><span data-prefix>$</span><span contenteditable>800</span></td>
-                        <td><span contenteditable>500</span></td>
-                        <td><span>600.00</span></td>
-                    </tr>
-                    <tr>
-                        <td><a class="cut">-</a><span contenteditable>Folder</span></td>
-                        <td><span contenteditable>Single sided</span></td>
-                        <td><span data-prefix>$</span><span contenteditable>800</span></td>
-                        <td><span contenteditable>500</span></td>
-                        <td><span>600.00</span></td>
-                    </tr>
-                    <tr>
-                        <td><a class="cut">-</a><span contenteditable>Folder</span></td>
-                        <td><span contenteditable>Single sided</span></td>
-                        <td><span data-prefix>$</span><span contenteditable>800</span></td>
-                        <td><span contenteditable>500</span></td>
-                        <td><span>600.00</span></td>
-                    </tr>
-                    <tr>
-                        <td><a class="cut">-</a><span contenteditable>Folder</span></td>
-                        <td><span contenteditable>Single sided</span></td>
-                        <td><span data-prefix>$</span><span contenteditable>800</span></td>
-                        <td><span contenteditable>500</span></td>
-                        <td><span>600.00</span></td>
-                    </tr>
-                </tbody>
-            </table>
-            <a class="add">+</a>
-            <table class="balance">
-                <tr>
-                    <th><span>TOTAL</span></th>
-                    <td><span>600.00</span></td>
-                </tr>
-                <tr>
-                    <th><span>AMOUNT PAID</span></th>
-                    <td><span data-prefix>$</span><span contenteditable>0.00</span></td>
-                </tr>
-                <tr>
-                    <th><span>BALANCE DUE</span></th>
-                    <td><span>600.00</span></td>
-                </tr>
-            </table>
-        </article>
-        <address>
-        <p class="mon">Payment Options</p>
-        <p>
-            - Cash / Cheque | BRANDFUL MEDIA <br>
-            - EQUITY BANK | BRANDFUL MEDIA 3002211221736 (TZS)<br> 
-            - EQUITY BANK | BRANDFUL MEDIA 3002211221737 (USD)
-        </p>
-    </address>
+        <div class="info">
+            <div class="number">
+                <b>NO.</b> 156</div>
+            <div class="date">
+                <b>Date:</b> 23rd June 2017</div>
+            <div class="tin right">
+                <b>TIN:</b> 156-234-678</div>
+        </div>
 
+        <div class="wrapper">
 
-        <aside>
-            <div>
-                <h1><span>BRANDFUL MEDIA LIMITED</span></h1>
-                <p>
-                    P.O.Box 13704,Arusha Cell:+255 713 806 756 <br>brandful.media@gmail.com | www.brandful.media
-                </p>
+            <div class="form">
+                M/s
+                <input type="text" name="name" value="" class="name" placeholder="Afya Max Medical Center">
+                <input type="text" name="address" value="" class="" placeholder="P.O.Box 1234">
+                <input type="text" name="location" value="" class="" placeholder="Arusha">
+
             </div>
-        </aside>
+            <article>
+                <table class="inventory">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span>ITEM</span>
+                            </th>
+                            <th>
+                                <span>DESCRIPTION</span>
+                            </th>
+                            <th>
+                                <span>UNIT PRICE</span>
+                            </th>
+                            <th>
+                                <span>QUANTITY</span>
+                            </th>
+                            <th>
+                                <span>TSHS</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a class="cut">-</a>
+                                <span contenteditable>Folder</span>
+                            </td>
+                            <td>
+                                <span contenteditable>Single sided</span>
+                            </td>
+                            <td>
+                                <span data-prefix>$</span>
+                                <span contenteditable>800</span>
+                            </td>
+                            <td>
+                                <span contenteditable>500</span>
+                            </td>
+                            <td>
+                                <span>600.00</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="cut">-</a>
+                                <span contenteditable>Folder</span>
+                            </td>
+                            <td>
+                                <span contenteditable>Single sided</span>
+                            </td>
+                            <td>
+                                <span data-prefix>$</span>
+                                <span contenteditable>800</span>
+                            </td>
+                            <td>
+                                <span contenteditable>500</span>
+                            </td>
+                            <td>
+                                <span>600.00</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="cut">-</a>
+                                <span contenteditable>Folder</span>
+                            </td>
+                            <td>
+                                <span contenteditable>Single sided</span>
+                            </td>
+                            <td>
+                                <span data-prefix>$</span>
+                                <span contenteditable>800</span>
+                            </td>
+                            <td>
+                                <span contenteditable>500</span>
+                            </td>
+                            <td>
+                                <span>600.00</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="cut">-</a>
+                                <span contenteditable>Folder</span>
+                            </td>
+                            <td>
+                                <span contenteditable>Single sided</span>
+                            </td>
+                            <td>
+                                <span data-prefix>$</span>
+                                <span contenteditable>800</span>
+                            </td>
+                            <td>
+                                <span contenteditable>500</span>
+                            </td>
+                            <td>
+                                <span>600.00</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a class="add">+</a>
+                <table class="balance">
+                    <tr>
+                        <th>
+                            <span>TOTAL</span>
+                        </th>
+                        <td>
+                            <span>600.00</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <span>AMOUNT PAID</span>
+                        </th>
+                        <td>
+                            <span data-prefix>$</span>
+                            <span contenteditable>0.00</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <span>BALANCE DUE</span>
+                        </th>
+                        <td>
+                            <span>600.00</span>
+                        </td>
+                    </tr>
+                </table>
+                <table class="meta">
+                    <tr>
+                        <td>
+                            <span id="prefix">$</span>
+                            <span>600.00</span>
+                        </td>
+                    </tr>
+                </table>
+            </article>
+            <footer class="footer">
+                <address>
+                    <p class="mon">Payment Options</p>
+                    <p>
+                        - Cash / Cheque | BRANDFUL MEDIA
+                        <br> - EQUITY BANK | BRANDFUL MEDIA 3002211221736 (TZS)
+                        <br> - EQUITY BANK | BRANDFUL MEDIA 3002211221737 (USD)
+                    </p>
+                </address>
+                <aside>
+                    <div>
+                        <h1>
+                            <span>BRANDFUL MEDIA LIMITED</span>
+                        </h1>
+                        <p>
+                            P.O.Box 13704,Arusha Cell:+255 713 806 756
+                            <br>brandful.media@gmail.com | www.brandful.media
+                        </p>
+                    </div>
+                </aside>
+            </footer>
+        </div>
+
     </body>
 
     </html>
