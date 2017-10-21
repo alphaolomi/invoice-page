@@ -137,7 +137,7 @@ body {
     padding-right: 0.5in;
     overflow: hidden;
     white-space: nowrap;
-    background-color: #f83535;
+    background-color: #ffe5e6;
 }
 
 .right {
@@ -305,30 +305,20 @@ article address {
 }
 
 
-/* table meta & balance */
-
-table.meta,
+/* table balance */
 table.balance {
     float: right;
-    width: 36%;
+    width: 50%;
+    color: white;
+    background: #f02215;
+    /* width: 36%; */       
+    
 }
 
-table.meta:after,
 table.balance:after {
     clear: both;
     content: "";
     display: table;
-}
-
-
-/* table meta */
-
-table.meta th {
-    width: 40%;
-}
-
-table.meta td {
-    width: 60%;
 }
 
 
@@ -381,6 +371,7 @@ table.balance td {
 
 table.balance td {
     text-align: right;
+    background-color: #ffe5e6;
 }
 
 
