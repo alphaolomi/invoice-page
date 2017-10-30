@@ -6,11 +6,11 @@
     color: inherit;
     font-family: inherit;
     font-size: inherit;
-    font-style: inherit;    
+    font-style: inherit;
     line-height: inherit;
     list-style: none;
     margin: 0;
-    padding: 0;     
+    padding: 0;
     vertical-align: top;
 }
 
@@ -31,7 +31,7 @@
 *[contenteditable]:focus,
 td:hover *[contenteditable],
 td:focus *[contenteditable],
-{
+    {
     background: #DEF;
     box-shadow: 0 0 1em 0.5em #DEF;
 }
@@ -75,10 +75,9 @@ td {
 }
 
 th {
-    color: #FFF;
+    color: #000;
     font-weight: 600;
-    /* background: #f02215; */
-    background-color: rgba(119, 118, 118, 0.897);
+    background-color: #d9d9d9;
 }
 
 td {
@@ -130,7 +129,7 @@ body {
 }
 
 .info {
-    margin-top: 15px;    
+    margin-top: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 0.5in;
@@ -148,7 +147,7 @@ body {
     float: left;
 }
 
-.info div {    
+.info div {
     display: inline;
 }
 
@@ -195,7 +194,7 @@ address p {
 
 address .mon {
     font-size: 13px;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .mon-2 {
@@ -263,7 +262,7 @@ address span {
     line-height: inherit;
 }
 
-.form input {
+.form span {
     text-align: center;
     line-height: 19px;
     margin: 0 auto;
@@ -306,13 +305,12 @@ article address {
 
 
 /* table balance */
+
 table.balance {
     float: right;
     width: 50%;
     color: white;
-    background: #f02215;
-    /* width: 36%; */       
-    
+    /* width: 36%; */
 }
 
 table.balance:after {
@@ -320,7 +318,6 @@ table.balance:after {
     content: "";
     display: table;
 }
-
 
 /* table items */
 
@@ -367,11 +364,15 @@ table.inventory td:nth-child(5) {
 table.balance th,
 table.balance td {
     width: 50%;
+    background-color: #d9d9d9;
+    color: #000;
+    font-weight: bold;
 }
 
 table.balance td {
+    font-weight: 600;
     text-align: right;
-    background-color: #ffe5e6;
+    background-color: #fe5e5e;
 }
 
 
@@ -438,6 +439,32 @@ aside {
 
 tr:hover .cut {
     opacity: 1;
+}
+
+footer p {
+    font-weight: 600;
+}
+
+footer h1 {
+    color: #ff0500;
+}
+
+a.btn {
+    background: #ffe5e6;
+    text-decoration: none;
+    border-radius: 0px;
+    padding: 10px 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-left: 670px;
+    border: 1px solid #ffe5e6;
+}
+
+a.btn:hover {
+    background: #FFFFFF;
+    color: #fe5e5e;
+    border-color: #fe5e5e;
 }
 
 @media print {
