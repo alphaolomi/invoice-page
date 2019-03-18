@@ -1,6 +1,9 @@
+/**
+ * Dont know
+ * ????????????????????
+ */
 (function (document) {
-    var
-        head = document.head = document.getElementsByTagName('head')[0] || document.documentElement,
+    var head = document.head = document.getElementsByTagName('head')[0] || document.documentElement,
         elements = 'article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output picture progress section summary time video x'.split(' '),
         elementsLength = elements.length,
         elementsIndex = 0,
@@ -20,9 +23,10 @@
     return head.insertBefore(element.lastChild, head.firstChild);
 })(document);
 
-/* Prototyping
-/* ========================================================================== */
-
+/**
+ * Prototyping
+ *
+ */
 (function (window, ElementPrototype, ArrayPrototype, polyfill) {
     function NodeList() {
         [polyfill]
@@ -61,9 +65,9 @@
         };
 })(this, Element.prototype, Array.prototype);
 
-/* Helper Functions
+/** Helper Functions
+ *  add an new table trow to the table
 /* ========================================================================== */
-
 function generateTableRow() {
     var emptyColumn = document.createElement('tr');
 
@@ -76,6 +80,12 @@ function generateTableRow() {
     return emptyColumn;
 }
 
+
+/**
+ * parseFloatHTML
+ *  gets the float varbiale from the hmtl data
+ * @param {*} element 
+  ========================================================================== */
 function parseFloatHTML(element) {
     return parseFloat(element.innerHTML.replace(/[^\d\.\-]+/g, '')) || 0;
 }
@@ -84,9 +94,12 @@ function parsePrice(number) {
     return number.toFixed(2).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1,');
 }
 
-/* Update Number
-/* ========================================================================== */
-
+/**
+ * Update Numbers
+ * .................
+ * @param {*} e 
+ *
+ *========================================================================== */
 function updateNumber(e) {
     var
         activeElement = document.activeElement,
@@ -105,16 +118,17 @@ function updateNumber(e) {
     updateInvoice();
 }
 
-/* Update Invoice
-/* ========================================================================== */
-
+/**
+ * Update Invoice
+ * gets the new data table and calculate new total
+ *
+ ========================================================================== */
 function updateInvoice() {
     var total = 0;
     var cells, price, total, a, i;
 
     // update inventory cells
     // ======================
-
     for (var a = document.querySelectorAll('table.inventory tbody tr'), i = 0; a[i]; ++i) {
         // get inventory row cells
         cells = a[i].querySelectorAll('span:last-child');
@@ -138,15 +152,6 @@ function updateInvoice() {
     // set total
     cells[0].innerHTML = total;
 
-    // set balance and meta balance
-    cells[2].innerHTML = document.querySelector('table.meta tr:last-child td:last-child span:last-child').innerHTML = parsePrice(total - parseFloatHTML(cells[1]));
-
-    // update prefix formatting
-    // ========================
-
-    var prefix = document.querySelector('#prefix').innerHTML;
-    for (a = document.querySelectorAll('[data-prefix]'), i = 0; a[i]; ++i) a[i].innerHTML = prefix;
-
     // update price formatting
     // =======================
 
@@ -154,14 +159,14 @@ function updateInvoice() {
         if (document.activeElement != a[i]) a[i].innerHTML = parsePrice(parseFloatHTML(a[i]));
 }
 
-/* On Content Load
-/* ========================================================================== */
-
+/**
+ *  On Content Load
+ *
+ * ========================================================================== */
 function onContentLoad() {
     updateInvoice();
 
-    var
-        input = document.querySelector('input'),
+    var input = document.querySelector('input'),
         image = document.querySelector('img');
 
     function onClick(e) {

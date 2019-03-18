@@ -7,14 +7,13 @@
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
-    font-weight: inherit;
     line-height: inherit;
     list-style: none;
     margin: 0;
     padding: 0;
-    text-decoration: none;
     vertical-align: top;
 }
+
 
 /* content editable */
 
@@ -41,22 +40,31 @@ span[contenteditable] {
     display: inline-block;
 }
 
+
+/* logo */
+
+.logo {
+    margin-top: -20px;
+    padding-bottom: 20px;
+    padding-left: 35%;
+    height: 50px;
+    width: 200px;
+}
+
+
 /* table */
 
 table {
+    border-collapse: collapse;
     font-size: 75%;
     table-layout: fixed;
     width: 100%;
 }
 
-table {
-    border-collapse: separate;
-    border-spacing: 2px;
-}
-
 th,
 td {
-    padding: 0.7em;
+    /* padding: 0.7em; */
+    padding: 8px;
     position: relative;
     text-align: left;
 }
@@ -67,14 +75,15 @@ td {
 }
 
 th {
-    color: #FFF;
+    color: #000;
     font-weight: 600;
-    background: #f02215;
+    background-color: #d9d9d9;
 }
 
 td {
     border-color: #DDD;
 }
+
 
 /* page */
 
@@ -82,9 +91,7 @@ html {
     font: 16px/1 'Open Sans', sans-serif;
     overflow: auto;
     padding: 0.5in;
-}
-
-html {
+    /*  */
     background: #999;
     cursor: default;
 }
@@ -94,8 +101,15 @@ body {
     height: 11in;
     margin: 0 auto;
     overflow: hidden;
-    padding: 0.5in;
+    padding-top: 0.5in;
+    padding-bottom: 0.5in;
     width: 8.5in;
+}
+
+.wrapper {
+    padding-top: 0.2in;
+    padding-left: 0.5in;
+    padding-right: 0.5in;
 }
 
 body {
@@ -104,23 +118,48 @@ body {
     box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
 }
 
-img {
-    margin-top: -20px;
-    padding-bottom: 20px;
-    padding-left: 35%;
-}
 
 /* header */
 
-.prof {
+.heading {
     font-size: 20px;
     font-weight: 700;
+    padding-left: 0.5in;
     padding-bottom: 10px;
+}
+
+.info {
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 0.5in;
+    padding-right: 0.5in;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #ffe5e6;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.info div {
+    display: inline;
+}
+
+.blackline {
     border-bottom: 4px solid black;
 }
 
-header {
+.redline {
     border-top: 4px solid red;
+}
+
+header {
     padding-top: 13px;
     margin: 0 0 3em;
 }
@@ -155,12 +194,10 @@ address p {
 
 address .mon {
     font-size: 13px;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .mon-2 {
-    border-top: 4px solid red;
-    padding-top: 30px;
     padding-bottom: 5px;
     text-align: center;
     font-size: 16px;
@@ -183,17 +220,62 @@ address .mon {
     font-weight: 600;
 }
 
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: black;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: black;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: black;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: black;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: black;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: black;
+}
+
 address span {
     font-size: 16px;
     font-weight: 600;
     text-align: center;
 }
 
+.form {
+    line-height: inherit;
+}
+
+.form span {
+    text-align: center;
+    line-height: 19px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    display: block;
+    font-weight: bold;
+}
+
 
 /* article */
 
 article {
-    padding-top: 5%;
+    padding-top: 1%;
 }
 
 article,
@@ -221,29 +303,20 @@ article address {
     font-size: 17px;
 }
 
-/* table meta & balance */
 
-table.meta,
+/* table balance */
+
 table.balance {
     float: right;
-    width: 36%;
+    width: 50%;
+    color: white;
+    /* width: 36%; */
 }
 
-table.meta:after,
 table.balance:after {
     clear: both;
     content: "";
     display: table;
-}
-
-/* table meta */
-
-table.meta th {
-    width: 40%;
-}
-
-table.meta td {
-    width: 60%;
 }
 
 /* table items */
@@ -283,19 +356,25 @@ table.inventory td:nth-child(5) {
     text-align: right;
     width: 12%;
     background-color: #ffe5e6;
-
 }
+
 
 /* table balance */
 
 table.balance th,
 table.balance td {
     width: 50%;
+    background-color: #d9d9d9;
+    color: #000;
+    font-weight: bold;
 }
 
 table.balance td {
+    font-weight: 600;
     text-align: right;
+    background-color: #fe5e5e;
 }
+
 
 /* aside */
 
@@ -310,6 +389,7 @@ aside {
     line-height: 19px;
     text-align: center;
 }
+
 
 /* javascript */
 
@@ -359,6 +439,32 @@ aside {
 
 tr:hover .cut {
     opacity: 1;
+}
+
+footer p {
+    font-weight: 600;
+}
+
+footer h1 {
+    color: #ff0500;
+}
+
+a.btn {
+    background: #ffe5e6;
+    text-decoration: none;
+    border-radius: 0px;
+    padding: 10px 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-left: 670px;
+    border: 1px solid #ffe5e6;
+}
+
+a.btn:hover {
+    background: #FFFFFF;
+    color: #fe5e5e;
+    border-color: #fe5e5e;
 }
 
 @media print {
