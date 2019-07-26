@@ -1,29 +1,26 @@
-# README #
+# Brandfull Media Invoice
 
-This README would normally document whatever steps are necessary to get your application up and running.
+A simple invoice page for Brandfull Media Company LTD, made sing html css and javasxcript,
+With all basic functionality of a spreadsheet in an invoice it can calculate the total price for
+item from the table
+Also it gives printable version of the page for printing.
 
-### What is this repository for? ###
+## What is this repository for?
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Use form inpiration in web development
 
-### How do I get set up? ###
+## How do I get set up?
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+- Summary of set up
+  Clone the repo
+  open on browser of like.
 
-### Contribution guidelines ###
+### Contribution guidelines
 
-* Writing tests
-* Code review
-* Other guidelines
+- None
 
-### Who do I talk to? ###
+### Who do I talk to?
 
-* Repo owner or admin
-* Other community or team contact
+- Alpha Olomi ([hello@alphaolomi.com](mailto:hello@alphaolomi.com))
+
+##
